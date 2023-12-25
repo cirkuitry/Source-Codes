@@ -1,0 +1,18 @@
+ORG 0x0000  ; Define the origin/start address
+
+MAIN:
+    MOV P1, #0x00  ; Clear P1 to turn off the LED initially
+    
+LOOP:
+    MOV P1, #0xFF  ; Set P1 to turn on the LED
+    ACALL DELAY     ; Call a delay subroutine
+    MOV P1, #0x00  ; Clear P1 to turn off the LED
+    ACALL DELAY     ; Call a delay subroutine
+    SJMP LOOP       ; Jump back to the loop
+
+DELAY:
+    ; Delay subroutine to create a time delay
+    ; Implement your delay logic here
+    ; For example, using loops or timer-based delay
+
+    RET             ; Return from the subroutine
