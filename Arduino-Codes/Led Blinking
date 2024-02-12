@@ -1,0 +1,16 @@
+// Blinking LED Program
+
+void setup() {
+  // Set the LED pin as an output
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // Turn on the LED
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1 second
+  
+  // Turn off the LED
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1 second
+}
